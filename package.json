@@ -1,7 +1,7 @@
 {
   "name": "discretize-monorepo-root",
   "description": "A monorepo containing discretize projects",
-  "version": "1.0",
+  "version": "0.1",
   "license": "UNLICENSED",
   "private": true,
   "workspaces": [
