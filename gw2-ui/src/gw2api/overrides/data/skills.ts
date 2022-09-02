@@ -12,7 +12,7 @@ export const missing_skills: Record<
     icon: 'https://wiki.guildwars2.com/images/b/b5/Dragon_Slash%E2%80%94Force.png',
     professions: ['Warrior'],
     description:
-      'Slash foes in front of you, ending Dragon Trigger. This attack consumes all charges to deal more damage.',
+      'Slash foes in front of you, ending Dragon Trigger. This attack consumes all charges to deal more damage. 덮어쓰기 테스트',
     specialization: 68,
     type: 'Profession',
     weapon_type: 'None',
