@@ -22,7 +22,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Blockt den nächsten Angriff; Dauer summiert sich.',
   },
   Alacrity: {
-    en: 'Skills recharge faster.',
+    en: '스킬 재사용 시간이 단축됩니다.',
     de: 'Fertigkeiten laden sich schneller wieder auf.',
   },
   Fury: {
@@ -38,7 +38,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Reduziert erlittenen Schlagschaden um 33%; Dauer summiert sich.',
   },
   Quickness: {
-    en: 'Skills and actions are faster.',
+    en: '스킬과 행동이 빠르게 시전됩니다.',
     de: 'Fertigkeiten und Aktionen sind schneller.',
   },
   Regeneration: {
