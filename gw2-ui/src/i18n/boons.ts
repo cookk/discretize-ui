@@ -2,18 +2,54 @@ import { Translation } from '.';
 import { BoonsTypes } from '../data/boons';
 
 export const TRANSLATIONS_BOONS: Record<BoonsTypes, Translation> = {
-  Aegis: { de: 'Aegis' },
-  Alacrity: { de: 'Tatendrang' },
-  Fury: { de: 'Wut' },
-  Might: { de: 'Macht' },
-  Protection: { de: 'Schutz' },
-  Quickness: { de: 'Schnelligkeit' },
-  Regeneration: { de: 'Regeneration' },
-  Resistance: { de: 'Widerstand' },
-  Resolution: { de: 'Entschlossenheit' },
-  Stability: { de: 'Stabilität' },
-  Swiftness: { de: 'Eile' },
-  Vigor: { de: 'Elan' },
+  Aegis: {
+    de: 'Aegis',
+    kr: 'Aegis',
+  },
+  Alacrity: {
+    de: 'Tatendrang',
+    kr: 'Alacrity',
+  },
+  Fury: {
+    de: 'Wut',
+    kr: 'Fury',
+  },
+  Might: {
+    de: 'Macht',
+    kr: 'Might',
+  },
+  Protection: {
+    de: 'Schutz',
+    kr: 'Protection',
+  },
+  Quickness: {
+    de: 'Schnelligkeit',
+    kr: 'Quickness',
+  },
+  Regeneration: {
+    de: 'Regeneration',
+    kr: 'Regeneration',
+  },
+  Resistance: {
+    de: 'Widerstand',
+    kr: 'Resistance',
+  },
+  Resolution: {
+    de: 'Entschlossenheit',
+    kr: 'Resolution',
+  },
+  Stability: {
+    de: 'Stabilität',
+    kr: 'Stability',
+  },
+  Swiftness: {
+    de: 'Eile',
+    kr: 'Swiftness',
+  },
+  Vigor: {
+    de: 'Elan',
+    kr: 'Vigor',
+  },
 };
 
 export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
@@ -22,7 +58,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Blockt den nächsten Angriff; Dauer summiert sich.',
   },
   Alacrity: {
-    en: '스킬 재사용 시간이 단축됩니다.',
+    en: 'Skills recharge faster.테스트',
     de: 'Fertigkeiten laden sich schneller wieder auf.',
   },
   Fury: {
@@ -38,7 +74,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Reduziert erlittenen Schlagschaden um 33%; Dauer summiert sich.',
   },
   Quickness: {
-    en: '스킬과 행동이 빠르게 시전됩니다.',
+    en: 'Skills and actions are faster.테스트',
     de: 'Fertigkeiten und Aktionen sind schneller.',
   },
   Regeneration: {

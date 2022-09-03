@@ -1,7 +1,7 @@
 import * as React from 'react';
 import React__default, { ReactElement, CSSProperties, MouseEventHandler, PropsWithChildren, ReactNode } from 'react';
 
-declare type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh';
+declare type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh' | 'kr';
 declare const APILanguageProvider: React.Provider<APILanguage>;
 
 declare type AttributeTypes = 'Power' | 'Precision' | 'Toughness' | 'Vitality' | 'Concentration' | 'Condition Damage' | 'Expertise' | 'Ferocity' | 'Healing Power' | 'Armor' | 'Boon Duration' | 'Critical Chance' | 'Critical Damage' | 'Condition Duration' | 'Health' | 'Agony Resistance' | 'Gold Find' | 'Karma Gain' | 'Magic Find' | 'XP Gain';

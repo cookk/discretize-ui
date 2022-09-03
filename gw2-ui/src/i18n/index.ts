@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-export type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh';
-export const API_LANGUAGES = ['de', 'en', 'es', 'fr', 'zh'];
+export type APILanguage = 'de' | 'en' | 'es' | 'fr' | 'zh' | 'kr';
+export const API_LANGUAGES = ['de', 'en', 'es', 'fr', 'zh', 'kr'];
 
 function isAPILanguage(l: string): l is APILanguage {
   return API_LANGUAGES.includes(l);
