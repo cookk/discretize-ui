@@ -224,7 +224,7 @@ export default class APICache<T extends { id: Id }> {
         GW2_API_URL +
         this.path +
         '/' +
-        ids.join(',') +
+        ids[0].toString() +
         '?lang=' +
         this.language;
       const res = await fetch(url, FETCH_OPTIONS);
