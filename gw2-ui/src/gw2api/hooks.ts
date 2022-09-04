@@ -42,7 +42,7 @@ function getCache<T extends { id: number }>(
 // Skills
 const CACHE_SKILLS: Partial<Record<APILanguage, APICache<GW2ApiSkill>>> = {};
 function skillCache(lang: APILanguage) {
-  return getCache(CACHE_SKILLS, '/v2/skills', lang, 1, 1, SKILL_OVERRIDES);
+  return getCache(CACHE_SKILLS, '/v2/skills', lang, 1, 20, SKILL_OVERRIDES);
 }
 
 export function useSkills(ids: Id[]) {
@@ -62,7 +62,7 @@ export function useSkill(id: Id) {
 // Traits
 const CACHE_TRAITS: Partial<Record<APILanguage, APICache<GW2ApiTrait>>> = {};
 function traitCache(lang: APILanguage) {
-  return getCache(CACHE_TRAITS, '/v2/traits', lang, 1, 1, TRAIT_OVERRIDES);
+  return getCache(CACHE_TRAITS, '/v2/traits', lang, 1, 20, TRAIT_OVERRIDES);
 }
 
 export function useTraits(ids: Id[]) {
@@ -82,7 +82,7 @@ export function useTrait(id: Id) {
 // Items
 const CACHE_ITEMS: Partial<Record<APILanguage, APICache<GW2ApiItem>>> = {};
 function itemCache(lang: APILanguage) {
-  return getCache(CACHE_ITEMS, '/v2/items', lang, 1, 2, ITEM_OVERRIDES);
+  return getCache(CACHE_ITEMS, '/v2/items', lang, 1, 20, ITEM_OVERRIDES);
 }
 
 export function useItems(ids: Id[]) {
@@ -108,8 +108,8 @@ function specializationCache(lang: APILanguage) {
     CACHE_SPECIALIZATIONS,
     '/v2/specializations',
     lang,
-    200,
-    2,
+    1,
+    20,
     SPECIALIZATION_OVERRIDES,
   );
 }
