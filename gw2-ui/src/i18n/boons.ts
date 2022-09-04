@@ -4,51 +4,39 @@ import { BoonsTypes } from '../data/boons';
 export const TRANSLATIONS_BOONS: Record<BoonsTypes, Translation> = {
   Aegis: {
     de: 'Aegis',
-    kr: 'Aegis',
   },
   Alacrity: {
     de: 'Tatendrang',
-    kr: 'Alacrity',
   },
   Fury: {
     de: 'Wut',
-    kr: 'Fury',
   },
   Might: {
     de: 'Macht',
-    kr: 'Might',
   },
   Protection: {
     de: 'Schutz',
-    kr: 'Protection',
   },
   Quickness: {
     de: 'Schnelligkeit',
-    kr: 'Quickness',
   },
   Regeneration: {
     de: 'Regeneration',
-    kr: 'Regeneration',
   },
   Resistance: {
     de: 'Widerstand',
-    kr: 'Resistance',
   },
   Resolution: {
     de: 'Entschlossenheit',
-    kr: 'Resolution',
   },
   Stability: {
     de: 'Stabilität',
-    kr: 'Stability',
   },
   Swiftness: {
     de: 'Eile',
-    kr: 'Swiftness',
   },
   Vigor: {
     de: 'Elan',
-    kr: 'Vigor',
   },
 };
 
@@ -58,7 +46,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Blockt den nächsten Angriff; Dauer summiert sich.',
   },
   Alacrity: {
-    en: 'Skills recharge faster.테스트',
+    en: 'Skills recharge faster.',
     de: 'Fertigkeiten laden sich schneller wieder auf.',
   },
   Fury: {
@@ -74,7 +62,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
     de: 'Reduziert erlittenen Schlagschaden um 33%; Dauer summiert sich.',
   },
   Quickness: {
-    en: 'Skills and actions are faster.테스트',
+    en: 'Skills and actions are faster.',
     de: 'Fertigkeiten und Aktionen sind schneller.',
   },
   Regeneration: {

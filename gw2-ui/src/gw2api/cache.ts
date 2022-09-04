@@ -1,6 +1,6 @@
 import { APILanguage } from '../i18n';
 
-const GW2_API_URL = 'https://api.guildwars2.com';
+const GW2_API_URL = 'https://guildwars2-korean.github.io';
 
 // An error occurred when connecting to the API
 export const API_ERROR_NETWORK = 500;
