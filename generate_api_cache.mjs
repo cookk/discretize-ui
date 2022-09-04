@@ -46,7 +46,7 @@ async function run() {
       let all = [];
 
       while (remaining.length > 0) {
-        let fetch_ids = remaining.splice(0, 200);
+        let fetch_ids = remaining.splice(0, 1);
         let arr = await fetch_api(
           `${endpoint}/${fetch_ids.join(',')}?lang=${lang}`,
         );
