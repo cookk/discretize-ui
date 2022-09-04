@@ -93,7 +93,7 @@ export default class APICache<T extends { id: Id }> {
   constructor(
     path: string,
     language: APILanguage = 'en',
-    max_ids_per_request: number = 200,
+    max_ids_per_request: number = 1,
     max_concurrent_requests: number = 1,
   ) {
     // Normally, specifying 'private foo' as a constructor parameter should do this for us
