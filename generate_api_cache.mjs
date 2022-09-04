@@ -48,7 +48,7 @@ async function run() {
       while (remaining.length > 0) {
         let fetch_ids = remaining.splice(0, 200);
         let arr = await fetch_api(
-          `${endpoint}?lang=${lang}&ids=${fetch_ids.join(',')}`,
+          `${endpoint}/${fetch_ids.join(',')}?lang=${lang}`,
         );
         all = all.concat(arr);
         fetched++;
