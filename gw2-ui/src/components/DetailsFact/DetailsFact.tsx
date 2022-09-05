@@ -205,6 +205,9 @@ const getKeyValue = (data: GW2ApiFact) => {
 
       break;
     }
+    case 'StunBreak': {
+      break;
+    }
     case 'Time': {
       const { text, duration } = data;
 
@@ -223,6 +226,7 @@ const getKeyValue = (data: GW2ApiFact) => {
     default: {
       // This line is a ts error if we forget a type
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const is_it_really_never: never = data;
       // eslint-disable-next-line no-console
       console.warn('Unknown fact type', data);
 
