@@ -206,6 +206,9 @@ const getKeyValue = (data: GW2ApiFact) => {
       break;
     }
     case 'StunBreak': {
+      const { text, value: factValue } = data;
+
+      value = factValue;
       break;
     }
     case 'Time': {
