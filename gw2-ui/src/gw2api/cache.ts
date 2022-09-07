@@ -1,6 +1,6 @@
 import { APILanguage } from '../i18n';
 
-const GW2_API_URL = 'https://https://gw2kr.com';
+const GW2_API_URL = 'https://gw2kr.com';
 
 // An error occurred when connecting to the API
 export const API_ERROR_NETWORK = 500;
