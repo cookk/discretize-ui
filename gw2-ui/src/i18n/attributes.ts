@@ -2,7 +2,10 @@ import { Translation } from '.';
 import { AttributeTypes } from '../data/attributes';
 
 export const TRANSLATIONS_ATTRIBUTES: Record<AttributeTypes, Translation> = {
-  Power: { de: 'Kraft' },
+  Power: {
+    en: '파워',
+    de: 'Kraft',
+  },
   Precision: { de: 'Präzision' },
   Toughness: { de: 'Zähigkeit' },
   Vitality: { de: 'Vitalität' },
