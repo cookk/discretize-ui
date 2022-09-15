@@ -19,7 +19,7 @@ const getKeyValue = (data: GW2ApiFact) => {
 
       const attribute = !text && target && apiAttributes[target];
       key = attribute ? `${attribute} Increase` : text;
-      value = `${!text || text.endsWith('Increase') ? '+' : ''}${Number(
+      value = `${!text || text.endsWith('증가') ? '+' : ''}${Number(
         factValue,
       ).toLocaleString()}`;
 
@@ -79,7 +79,7 @@ const getKeyValue = (data: GW2ApiFact) => {
       key = text;
       value = `${finisherType}${
         percent !== undefined && percent !== 0 && percent !== 100
-          ? ` (${percent}% Chance)`
+          ? ` (${percent}%)`
           : ''
       }`;
 
@@ -130,7 +130,7 @@ const getKeyValue = (data: GW2ApiFact) => {
       const { text, hit_count: hitCount } = data;
 
       key = text;
-      value = `${hitCount}x`;
+      value = `${hitCount}회`;
 
       break;
     }
@@ -170,7 +170,7 @@ const getKeyValue = (data: GW2ApiFact) => {
         key = (
           <>
             {status}
-            <span className={classes.headerFact}>{`(${duration}s)`}</span>
+            <span className={classes.headerFact}>{`(${duration}초)`}</span>
           </>
         );
       } else {
@@ -215,7 +215,7 @@ const getKeyValue = (data: GW2ApiFact) => {
       const { text, duration } = data;
 
       key = text;
-      value = `${duration} 초${duration > 1 ? 's' : ''}`;
+      value = `${duration} ${duration > 1 ? '초' : ''}`;
 
       break;
     }

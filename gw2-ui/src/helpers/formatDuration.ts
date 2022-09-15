@@ -14,11 +14,11 @@ export default function formatDuration(value: number) {
   seconds %= 60;
 
   return [
-    weeks && `${weeks} w`,
-    days && `${days} d`,
-    hours && `${hours} h`,
-    minutes && `${minutes} m`,
-    seconds && `${seconds}${minutes ? ' s' : 's'}`,
+    weeks && `${weeks} 주`,
+    days && `${days} 일`,
+    hours && `${hours} 시간`,
+    minutes && `${minutes} 분`,
+    seconds && `${seconds}${minutes ? ' 초' : '초'}`,
   ]
     .filter((entry) => !!entry)
     .join(', ');
