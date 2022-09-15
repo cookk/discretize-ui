@@ -2,20 +2,62 @@ import { Translation } from '.';
 import { ConditionTypes } from '../data/conditions';
 
 export const CONDITIONS: Record<ConditionTypes, Translation> = {
-  Bleeding: { de: 'Blutung' },
-  Blinded: { de: 'Geblendet' },
-  Burning: { de: 'Brennen' },
-  Chilled: { de: 'Kühle' },
-  Confusion: { de: 'Konfusion' },
-  Crippled: { de: 'Verkrüppelung' },
-  Fear: { de: 'Furcht einflößen' },
-  Immobile: { de: 'Immobilisiert' },
-  Poisoned: { de: 'Vergiftet' },
-  Slow: { de: 'Langsam' },
-  Taunt: { de: 'Provozieren' },
-  Torment: { de: 'Pein' },
-  Vulnerability: { de: 'Verwundbarkeit' },
-  Weakness: { de: 'Schwäche' },
+  Bleeding: {
+    en: '블리딩',
+    de: 'Blutung',
+  },
+  Blinded: {
+    en: '블라인드',
+    de: 'Geblendet',
+  },
+  Burning: {
+    en: '버닝',
+    de: 'Brennen',
+  },
+  Chilled: {
+    en: '칠',
+    de: 'Kühle',
+  },
+  Confusion: {
+    en: '컨퓨전',
+    de: 'Konfusion',
+  },
+  Crippled: {
+    en: '크리플',
+    de: 'Verkrüppelung',
+  },
+  Fear: {
+    en: '피어',
+    de: 'Furcht einflößen',
+  },
+  Immobile: {
+    en: '이모빌',
+    de: 'Immobilisiert',
+  },
+  Poisoned: {
+    en: '포이즌',
+    de: 'Vergiftet',
+  },
+  Slow: {
+    en: '슬로우',
+    de: 'Langsam',
+  },
+  Taunt: {
+    en: '타운트',
+    de: 'Provozieren',
+  },
+  Torment: {
+    en: '토먼트',
+    de: 'Pein',
+  },
+  Vulnerability: {
+    en: '벌너러빌리티',
+    de: 'Verwundbarkeit',
+  },
+  Weakness: {
+    en: '위크니스',
+    de: 'Schwäche',
+  },
 };
 
 export const CONDITIONS_DESCRIPTIONS: Record<ConditionTypes, Translation> = {

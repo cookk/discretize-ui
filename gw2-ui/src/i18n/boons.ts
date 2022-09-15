@@ -3,39 +3,51 @@ import { BoonsTypes } from '../data/boons';
 
 export const TRANSLATIONS_BOONS: Record<BoonsTypes, Translation> = {
   Aegis: {
+    en: '이지스',
     de: 'Aegis',
   },
   Alacrity: {
+    en: '알라크리티',
     de: 'Tatendrang',
   },
   Fury: {
+    en: '퓨리',
     de: 'Wut',
   },
   Might: {
+    en: '마이트',
     de: 'Macht',
   },
   Protection: {
+    en: '프로텍션',
     de: 'Schutz',
   },
   Quickness: {
+    en: '퀴크니스',
     de: 'Schnelligkeit',
   },
   Regeneration: {
+    en: '리제너레이션',
     de: 'Regeneration',
   },
   Resistance: {
+    en: '레지스턴스',
     de: 'Widerstand',
   },
   Resolution: {
+    en: '레졸루션',
     de: 'Entschlossenheit',
   },
   Stability: {
+    en: '스태빌리티',
     de: 'Stabilität',
   },
   Swiftness: {
+    en: '스위프트니스',
     de: 'Eile',
   },
   Vigor: {
+    en: '비거',
     de: 'Elan',
   },
 };
@@ -88,7 +100,7 @@ export const TRANSLATIONS_BOON_DESCRIPTIONS: Record<BoonsTypes, Translation> = {
   },
   Stability: {
     // en: 'Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared or taunted.',
-    en: '넉다운, 넉백, 당겨짐, 날아감, 스턴, 데이즈, 떠오름, 가라앉음, 공포, 도발에 면역된다.',
+    en: '넉다운, 넉백, 풀, 런치, 스턴, 데이즈, 플로트, 싱크, 피어, 타운트에 면역된다.',
     de: 'Immun gegen Niederschlag, Hoch- und Zurückschleudern, Ziehen, Betäubung, Benommenheit, Schweben, Sinken, Furcht oder Provozieren.',
   },
   Swiftness: {

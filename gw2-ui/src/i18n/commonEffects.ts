@@ -2,17 +2,45 @@ import { Translation } from '.';
 import { CommonEffectTypes } from '../data/commonEffects';
 
 export const COMMON_EFFECTS: Record<CommonEffectTypes, Translation> = {
-  Agony: { de: 'Qual' },
-  Barrier: { de: 'Barriere' },
-  Blight: { de: 'Verschandelung' },
-  Exposed: { de: 'Entblößt' },
-  Invulnerability: { de: 'Unverwundbarkeit' },
-  Revealed: { de: 'Enthüllt' },
-  'Rigorous Certainty': { de: 'Strikte Gewissheit' },
-  Stealth: { de: 'Tarnung' },
-  'Stun Break': { de: 'Betäubungsbrecher' },
-  Superspeed: { de: 'Supergeschwindigkeit' },
-  Unblockable: { de: 'Kann nicht geblockt werden' },
+  Agony: {
+    en: '아고니',
+    de: 'Qual',
+  },
+  Barrier: {
+    en: '배리어',
+    de: 'Barriere',
+  },
+  Blight: {
+    de: 'Verschandelung',
+  },
+  Exposed: {
+    de: 'Entblößt',
+  },
+  Invulnerability: {
+    de: 'Unverwundbarkeit',
+  },
+  Revealed: {
+    de: 'Enthüllt',
+  },
+  'Rigorous Certainty': {
+    de: 'Strikte Gewissheit',
+  },
+  Stealth: {
+    en: '스텔스',
+    de: 'Tarnung',
+  },
+  'Stun Break': {
+    en: '스턴 브레이크',
+    de: 'Betäubungsbrecher',
+  },
+  Superspeed: {
+    en: '슈퍼스피드',
+    de: 'Supergeschwindigkeit',
+  },
+  Unblockable: {
+    en: '언블락커블',
+    de: 'Kann nicht geblockt werden',
+  },
 };
 
 export const COMMON_EFFECTS_DESCRIPTIONS: Record<

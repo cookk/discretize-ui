@@ -3,27 +3,35 @@ import { ControlEffectTypes } from '../data/controlEffects';
 
 export const CONTROL_EFFECTS: Record<ControlEffectTypes, Translation> = {
   Daze: {
+    en: '데이즈',
     de: 'Benommenheit',
   },
   Float: {
+    en: '플로트',
     de: 'Float',
   },
   Knockback: {
+    en: '넉백',
     de: 'Rückschlag',
   },
   Knockdown: {
+    en: '넉다운',
     de: 'Niederschlag',
   },
   Launch: {
+    en: '런치',
     de: 'Hochschleudern',
   },
   Pull: {
+    en: '풀',
     de: 'Ziehen',
   },
   Sink: {
+    en: '싱크',
     de: 'Sinken',
   },
   Stun: {
+    en: '스턴',
     de: 'Betäubung',
   },
 };

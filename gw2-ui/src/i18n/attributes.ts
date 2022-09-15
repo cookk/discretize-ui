@@ -6,25 +6,82 @@ export const TRANSLATIONS_ATTRIBUTES: Record<AttributeTypes, Translation> = {
     en: '파워',
     de: 'Kraft',
   },
-  Precision: { de: 'Präzision' },
-  Toughness: { de: 'Zähigkeit' },
-  Vitality: { de: 'Vitalität' },
-  Concentration: { de: 'Konzentration' },
-  'Condition Damage': { de: 'Zustandsschaden' },
-  Expertise: { de: 'Fachkenntnis' },
-  Ferocity: { de: 'Wildheit' },
-  'Healing Power': { de: 'Heilkraft' },
-  Armor: { de: 'Rüstung' },
-  'Boon Duration': { de: 'Segensdauer' },
-  'Critical Chance': { de: 'Kritische Trefferchance' },
-  'Critical Damage': { de: 'Kritischer Schaden' },
-  'Condition Duration': { de: 'Zustandsdauer' },
-  Health: { de: 'Lebenspunkte' },
-  'Agony Resistance': { de: 'Qual-Widerstand' },
-  'Gold Find': { de: 'Goldgespür' },
-  'Karma Gain': { de: 'Karmazuwachs' },
-  'Magic Find': { de: 'Magisches Gespür' },
-  'XP Gain': { de: 'EP-Zuwachs' },
+  Precision: {
+    en: '프리시전',
+    de: 'Präzision',
+  },
+  Toughness: {
+    en: '터프니스',
+    de: 'Zähigkeit',
+  },
+  Vitality: {
+    en: '바이탈리티',
+    de: 'Vitalität',
+  },
+  Concentration: {
+    en: '컨센트레이션',
+    de: 'Konzentration',
+  },
+  'Condition Damage': {
+    en: '컨디션 데미지',
+    de: 'Zustandsschaden',
+  },
+  Expertise: {
+    en: '엑스퍼티즈',
+    de: 'Fachkenntnis',
+  },
+  Ferocity: {
+    en: '페로시티',
+    de: 'Wildheit',
+  },
+  'Healing Power': {
+    en: '힐링 파워',
+    de: 'Heilkraft',
+  },
+  Armor: {
+    en: '아머',
+    de: 'Rüstung',
+  },
+  'Boon Duration': {
+    en: '분 지속시간',
+    de: 'Segensdauer',
+  },
+  'Critical Chance': {
+    en: '크리티컬 확률',
+    de: 'Kritische Trefferchance',
+  },
+  'Critical Damage': {
+    en: '크리티컬 데미지',
+    de: 'Kritischer Schaden',
+  },
+  'Condition Duration': {
+    en: '컨디션 지속시간',
+    de: 'Zustandsdauer',
+  },
+  Health: {
+    en: '생명력',
+    de: 'Lebenspunkte',
+  },
+  'Agony Resistance': {
+    en: '아고니 저항',
+    de: 'Qual-Widerstand',
+  },
+  'Gold Find': {
+    en: '골드 파인드',
+    de: 'Goldgespür',
+  },
+  'Karma Gain': {
+    en: '카르마 획득',
+    de: 'Karmazuwachs',
+  },
+  'Magic Find': {
+    en: '매직 파인드',
+    de: 'Magisches Gespür',
+  },
+  'XP Gain': {
+    en: '경험치 획득',
+    de: 'EP-Zuwachs',
+  },
 };
 
 export const TRANSLATIONS_ATTRIBUTE_DESCRIPTIONS: Record<
