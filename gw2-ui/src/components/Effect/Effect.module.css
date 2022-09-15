@@ -216,6 +216,9 @@
 .imageControlStun {
   background-image: url(../../assets/icons/Control/Stun.png);
 }
+.imageControlLaunch {
+  background-image: url(../../assets/icons/Control/Launch.png);
+}
 
 .imageAuraChaos {
   background-image: url(../../assets/icons/Aura/Chaos.png);
