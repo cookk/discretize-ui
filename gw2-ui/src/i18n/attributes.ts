@@ -135,7 +135,7 @@ export const TRANSLATIONS_ATTRIBUTE_DESCRIPTIONS: Record<
   },
   Armor: {
     // en: 'Combines item defense and toughness; reduces incoming damage',
-    en: '아이템 방어력과 Toughness를 종합한다; 받는 데미지를 감소시킨다.',
+    en: '아이템 방어력과 터프니스를 종합한다; 받는 데미지를 감소시킨다.',
     de: 'Fasst Ausrüstungsverteidigung und Zähigkeit zusammen; reduziert erlittenen Schaden',
   },
   'Boon Duration': {
