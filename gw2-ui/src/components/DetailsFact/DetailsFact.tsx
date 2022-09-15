@@ -18,8 +18,8 @@ const getKeyValue = (data: GW2ApiFact) => {
       const { text, value: factValue, target } = data;
 
       const attribute = !text && target && apiAttributes[target];
-      key = attribute ? `${attribute} Increase` : text;
-      value = `${!text || text.endsWith('증가') ? '+' : ''}${Number(
+      key = attribute ? `${attribute} 증가` : text;
+      value = `${!text || text.endsWith('Increase') ? '+' : ''}${Number(
         factValue,
       ).toLocaleString()}`;
 
