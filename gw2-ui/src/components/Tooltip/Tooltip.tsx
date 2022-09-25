@@ -119,7 +119,7 @@ const Tooltip = ({
         return;
       } else {
         if (e.target instanceof Node) {
-          if (current.contains(e.target) || e.target.contains(current)) {
+          if (current.contains(e.target)) {
             setVisible(true);
             setPosition(e);
             return;
