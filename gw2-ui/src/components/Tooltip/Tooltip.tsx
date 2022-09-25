@@ -107,6 +107,10 @@ const Tooltip = ({
       update();
     }
 
+    function onclick() {
+      setVisible(!visible);
+    }
+
     function onpointerover(e: PointerEvent) {
       setVisible(false);
       setPosition(e);
@@ -121,13 +125,15 @@ const Tooltip = ({
       setPosition(e);
     }
 
-    e.addEventListener('pointerover', onpointerover);
-    e.addEventListener('pointerout', onpointerout);
-    e.addEventListener('pointermove', onpointermove);
+    e.addEventListener('click', onclick);
+    // e.addEventListener('pointerover', onpointerover);
+    // e.addEventListener('pointerout', onpointerout);
+    // e.addEventListener('pointermove', onpointermove);
     return () => {
-      e.removeEventListener('pointerover', onpointerover);
-      e.removeEventListener('pointerout', onpointerout);
-      e.removeEventListener('pointermove', onpointermove);
+      e.removeEventListener('click', onclick);
+      // e.removeEventListener('pointerover', onpointerover);
+      // e.removeEventListener('pointerout', onpointerout);
+      // e.removeEventListener('pointermove', onpointermove);
     };
   }, [children_with_ref, update]);
 
