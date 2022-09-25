@@ -99,38 +99,49 @@ const Tooltip = ({
 
   // Add pointer event handlers to the children to track the tooltip's position
   useLayoutEffectSafe(() => {
-    const e = children_ref.current;
-    if (!e) return;
+    const current = children_ref.current;
+    if (!current) return;
 
     function setPosition(e: PointerEvent) {
       position_ref.current = rect(e.clientX, e.clientY);
       update();
     }
 
-    function onclick() {
-      setVisible(!visible);
+    function onpointerenter(e: PointerEvent) {
+      if (current instanceof HTMLElement) {
+        onpointerenterInner(e, current);
+      }
     }
 
-    function onpointerover(e: PointerEvent) {
+    function onpointerenterInner(e: PointerEvent, current: HTMLElement) {
+      if (e.target instanceof Node && current.contains(e.target)) {
+        setVisible(true);
+        setPosition(e);
+        return;
+      }
       setVisible(false);
-      setPosition(e);
     }
 
-    function onpointerout() {
-      setVisible(false);
-      position_ref.current = NULL_RECT;
-    }
+    // function onpointerover(e: PointerEvent) {
+    //   setVisible(false);
+    //   setPosition(e);
+    // }
 
-    function onpointermove(e: PointerEvent) {
-      setPosition(e);
-    }
+    // function onpointerout() {
+    //   setVisible(false);
+    //   position_ref.current = NULL_RECT;
+    // }
 
-    e.addEventListener('click', onclick);
+    // function onpointermove(e: PointerEvent) {
+    //   setPosition(e);
+    // }
+
+    current.addEventListener('pointerenter', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      e.removeEventListener('click', onclick);
+      current.removeEventListener('pointerenter', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
