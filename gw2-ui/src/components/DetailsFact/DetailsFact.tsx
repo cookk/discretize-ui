@@ -92,7 +92,7 @@ const getKeyValue = (data: GW2ApiFact) => {
         key = (
           <>
             {text}
-            <span className={classes.headerFact}>{`(${hitCount}x)`}</span>
+            <span className={classes.headerFact}>{`(${hitCount}회)`}</span>
           </>
         );
       } else {
