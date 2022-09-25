@@ -128,6 +128,9 @@ const Tooltip = ({
           setVisible(true);
           setPosition(e);
           return;
+        } else {
+          setVisible(false);
+          return;
         }
       }
     }
