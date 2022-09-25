@@ -70,7 +70,7 @@ const Tooltip = ({
   const children_ref = useRef<HTMLElement>(null);
   const position_ref = useRef<ClientRectObject>(NULL_RECT);
   const [_visible, setVisible] = useState<boolean>(false);
-  const visible = !disabled && _visible;
+  let visible = !disabled && _visible;
 
   // We need to finagle a ref into the child component.
   const children_with_ref = useMemo(() => {
@@ -97,6 +97,10 @@ const Tooltip = ({
     return null;
   }, [visible, propsContent, render]);
 
+  function setInputVisible(inputVisible: boolean) {
+    visible = inputVisible;
+  }
+
   // Add pointer event handlers to the children to track the tooltip's position
   useLayoutEffectSafe(() => {
     const current = children_ref.current;
@@ -118,18 +122,15 @@ const Tooltip = ({
 
     function onpointerenterInner(e: PointerEvent, current: Element) {
       if (visible) {
-        console.log('visible');
-        setVisible(false);
+        setInputVisible(false);
         return;
       } else {
-        console.log('not visible');
         if (e.target instanceof Node && current.contains(e.target)) {
-          console.log('node and containts');
-          setVisible(true);
+          setInputVisible(true);
           setPosition(e);
           return;
         } else {
-          setVisible(false);
+          setInputVisible(false);
           return;
         }
       }
