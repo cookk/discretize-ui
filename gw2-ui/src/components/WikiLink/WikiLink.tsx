@@ -47,11 +47,11 @@ const WikiLink = ({
     <Component
       // if there is no className provided, we assume that there is no profession specific styling wanted and default.
       className={clsx(className || css.default, css.root)}
-      href={`https://wiki-${lang}.guildwars2.com/wiki/Special:Search/${encodeURIComponent(
-        to,
-      )}`}
-      target="_blank"
-      rel="noreferrer noopener nofollow"
+      // href={`https://wiki-${lang}.guildwars2.com/wiki/Special:Search/${encodeURIComponent(
+      //   to,
+      // )}`}
+      // target="_blank"
+      // rel="noreferrer noopener nofollow"
       style={style}
     >
       {text || to}

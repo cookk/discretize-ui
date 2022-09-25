@@ -115,9 +115,14 @@ const Tooltip = ({
 
     function onpointerenterInner(e: PointerEvent, current: HTMLElement) {
       if (e.target instanceof Node && current.contains(e.target)) {
-        setVisible(true);
-        setPosition(e);
-        return;
+        if (!visible) {
+          setVisible(true);
+          setPosition(e);
+          return;
+        } else {
+          setVisible(false);
+          return;
+        }
       }
       setVisible(false);
     }
