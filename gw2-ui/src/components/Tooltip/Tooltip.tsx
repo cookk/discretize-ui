@@ -102,25 +102,29 @@ const Tooltip = ({
     const current = children_ref.current;
     if (!current) return;
 
-    function setPosition(e: Event) {
-      if (e instanceof MouseEvent || e instanceof Touch) {
-        position_ref.current = rect(e.clientX, e.clientY);
-      }
+    function setPosition(e: PointerEvent) {
+      position_ref.current = rect(e.clientX, e.clientY);
       update();
     }
 
-    function onpointerenter(e: Event) {
-      if (current instanceof HTMLElement) {
+    function onpointerenter(e: PointerEvent) {
+      if (current instanceof Element) {
+        console.log('instance of Element');
         onpointerenterInner(e, current);
+      } else {
+        console.log('not instance of Element');
       }
     }
 
-    function onpointerenterInner(e: Event, current: HTMLElement) {
+    function onpointerenterInner(e: PointerEvent, current: Element) {
       if (visible) {
+        console.log('visible');
         setVisible(false);
         return;
       } else {
+        console.log('not visible');
         if (e.target instanceof Node && current.contains(e.target)) {
+          console.log('node and containts');
           setVisible(true);
           setPosition(e);
           return;
@@ -142,14 +146,12 @@ const Tooltip = ({
     //   setPosition(e);
     // }
 
-    document.addEventListener('mousedown', onpointerenter);
-    document.addEventListener('touchstart', onpointerenter);
+    document.addEventListener('pointerdown', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      document.removeEventListener('mousedown', onpointerenter);
-      document.removeEventListener('touchstart', onpointerenter);
+      document.removeEventListener('pointerdown', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
