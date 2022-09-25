@@ -136,12 +136,12 @@ const Tooltip = ({
     //   setPosition(e);
     // }
 
-    current.addEventListener('pointerdown', onpointerenter);
+    document.addEventListener('pointerdown', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      current.removeEventListener('pointerdown', onpointerenter);
+      document.removeEventListener('pointerdown', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
