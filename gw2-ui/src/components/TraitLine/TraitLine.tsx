@@ -137,7 +137,8 @@ const TraitLine = (props: TraitLineProps): ReactElement => {
       id={majorTraitId}
       disableText
       inline={false}
-      inactive={!isSelected}
+      // inactive={{!isSelected}}
+      inactive={false}
       className={clsx(
         css.majorTrait,
         !isSelected && (controlled || selectable) && css.majorTraitAdditional,

@@ -52,6 +52,7 @@ const WikiLink = ({
       // )}`}
       // target="_blank"
       // rel="noreferrer noopener nofollow"
+      href="javascript:;"
       style={style}
     >
       {text || to}
