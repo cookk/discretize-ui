@@ -124,6 +124,10 @@ const Tooltip = ({
           return;
         }
       }
+      if (!visible) {
+        setVisible(true);
+        return;
+      }
       setVisible(false);
     }
 
