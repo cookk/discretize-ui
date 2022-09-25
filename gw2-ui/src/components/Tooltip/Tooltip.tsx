@@ -102,28 +102,26 @@ const Tooltip = ({
     const current = children_ref.current;
     if (!current) return;
 
-    function setPosition(e: MouseEvent) {
+    function setPosition(e: PointerEvent) {
       position_ref.current = rect(e.clientX, e.clientY);
       update();
     }
 
-    function onpointerenter(e: MouseEvent) {
+    function onpointerenter(e: PointerEvent) {
       if (current instanceof HTMLElement) {
         onpointerenterInner(e, current);
       }
     }
 
-    function onpointerenterInner(e: MouseEvent, current: HTMLElement) {
+    function onpointerenterInner(e: PointerEvent, current: HTMLElement) {
       if (visible) {
         setVisible(false);
         return;
       } else {
-        if (e.target instanceof Node) {
-          if (current.contains(e.target)) {
-            setVisible(true);
-            setPosition(e);
-            return;
-          }
+        if (e.target instanceof Node && current.contains(e.target)) {
+          setVisible(true);
+          setPosition(e);
+          return;
         }
       }
     }
@@ -142,12 +140,12 @@ const Tooltip = ({
     //   setPosition(e);
     // }
 
-    document.addEventListener('click', onpointerenter);
+    document.addEventListener('pointerdown', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      document.removeEventListener('click', onpointerenter);
+      document.removeEventListener('pointerdown', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
