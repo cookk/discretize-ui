@@ -102,28 +102,29 @@ const Tooltip = ({
     const current = children_ref.current;
     if (!current) return;
 
-    function setPosition(e: PointerEvent) {
+    function setPosition(e: MouseEvent) {
       position_ref.current = rect(e.clientX, e.clientY);
       update();
     }
 
-    function onpointerenter(e: PointerEvent) {
+    function onpointerenter(e: MouseEvent) {
       if (current instanceof HTMLElement) {
         onpointerenterInner(e, current);
       }
     }
 
-    function onpointerenterInner(e: PointerEvent, current: HTMLElement) {
-      if (e.target instanceof Node && current.contains(e.target)) {
-        if (!visible) {
-          setVisible(true);
-          setPosition(e);
-        } else {
-          setVisible(false);
-        }
+    function onpointerenterInner(e: MouseEvent, current: HTMLElement) {
+      if (visible) {
+        setVisible(false);
         return;
       } else {
-        setVisible(false);
+        if (e.target instanceof Node) {
+          if (current.contains(e.target) || e.target.contains(current)) {
+            setVisible(true);
+            setPosition(e);
+            return;
+          }
+        }
       }
     }
 
@@ -141,12 +142,12 @@ const Tooltip = ({
     //   setPosition(e);
     // }
 
-    document.addEventListener('pointerdown', onpointerenter);
+    document.addEventListener('click', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      document.removeEventListener('pointerdown', onpointerenter);
+      document.removeEventListener('click', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
