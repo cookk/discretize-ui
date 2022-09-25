@@ -118,17 +118,13 @@ const Tooltip = ({
         if (!visible) {
           setVisible(true);
           setPosition(e);
-          return;
         } else {
           setVisible(false);
-          return;
         }
-      }
-      if (!visible) {
-        setVisible(true);
         return;
+      } else {
+        setVisible(false);
       }
-      setVisible(false);
     }
 
     // function onpointerover(e: PointerEvent) {
