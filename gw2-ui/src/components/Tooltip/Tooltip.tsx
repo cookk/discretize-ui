@@ -102,18 +102,20 @@ const Tooltip = ({
     const current = children_ref.current;
     if (!current) return;
 
-    function setPosition(e: PointerEvent) {
-      position_ref.current = rect(e.clientX, e.clientY);
+    function setPosition(e: Event) {
+      if (e instanceof MouseEvent || e instanceof Touch) {
+        position_ref.current = rect(e.clientX, e.clientY);
+      }
       update();
     }
 
-    function onpointerenter(e: PointerEvent) {
+    function onpointerenter(e: Event) {
       if (current instanceof HTMLElement) {
         onpointerenterInner(e, current);
       }
     }
 
-    function onpointerenterInner(e: PointerEvent, current: HTMLElement) {
+    function onpointerenterInner(e: Event, current: HTMLElement) {
       if (visible) {
         setVisible(false);
         return;
@@ -140,12 +142,14 @@ const Tooltip = ({
     //   setPosition(e);
     // }
 
-    document.addEventListener('pointerdown', onpointerenter);
+    document.addEventListener('mousedown', onpointerenter);
+    document.addEventListener('touchstart', onpointerenter);
     // e.addEventListener('pointerover', onpointerover);
     // e.addEventListener('pointerout', onpointerout);
     // e.addEventListener('pointermove', onpointermove);
     return () => {
-      document.removeEventListener('pointerdown', onpointerenter);
+      document.removeEventListener('mousedown', onpointerenter);
+      document.removeEventListener('touchstart', onpointerenter);
       // e.removeEventListener('pointerover', onpointerover);
       // e.removeEventListener('pointerout', onpointerout);
       // e.removeEventListener('pointermove', onpointermove);
