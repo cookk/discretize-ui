@@ -109,10 +109,7 @@ const Tooltip = ({
 
     function onpointerenter(e: PointerEvent) {
       if (current instanceof Element) {
-        console.log('instance of Element');
         onpointerenterInner(e, current);
-      } else {
-        console.log('not instance of Element');
       }
     }
 

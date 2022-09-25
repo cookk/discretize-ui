@@ -146,7 +146,7 @@ const TraitLine = (props: TraitLineProps): ReactElement => {
         ...(!isSelected &&
           (controlled || selectable) && {
             onClick: (event) => {
-              event.preventDefault();
+              // event.preventDefault();
 
               if (controlled) {
                 onSelect({
@@ -256,7 +256,7 @@ const TraitLine = (props: TraitLineProps): ReactElement => {
                 {renderTraitLineConnector(
                   path !== undefined
                     ? { props: { end: path } }
-                    : { props: { disabled: false } },
+                    : { props: { disabled: true } },
                 )}
 
                 <div className={css.majorTraitsChunk}>
@@ -274,7 +274,7 @@ const TraitLine = (props: TraitLineProps): ReactElement => {
                   renderTraitLineConnector(
                     path !== undefined
                       ? { props: { start: path } }
-                      : { props: { disabled: false } },
+                      : { props: { disabled: true } },
                   )}
               </Fragment>
             );
