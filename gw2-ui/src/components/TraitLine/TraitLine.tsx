@@ -146,7 +146,7 @@ const TraitLine = (props: TraitLineProps): ReactElement => {
         ...(!isSelected &&
           (controlled || selectable) && {
             onClick: (event) => {
-              // event.preventDefault();
+              event.preventDefault();
 
               if (controlled) {
                 onSelect({

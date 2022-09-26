@@ -102,56 +102,55 @@ const Tooltip = ({
     const current = children_ref.current;
     if (!current) return;
 
-    function setPosition(e: PointerEvent) {
-      position_ref.current = rect(e.clientX, e.clientY);
+    function setPosition(e: Event) {
+      if (e instanceof PointerEvent) {
+        position_ref.current = rect(e.clientX, e.clientY);
+      } else if (e instanceof TouchEvent) {
+        position_ref.current = rect(e.touches[0].clientX, e.touches[0].clientY);
+      }
       update();
     }
 
-    function onpointerenter(e: PointerEvent) {
+    function ontouchstart(e: TouchEvent) {
       if (current instanceof Element) {
-        onpointerenterInner(e, current);
+        ontouchstartInner(e, current);
       }
     }
 
-    function onpointerenterInner(e: PointerEvent, current: Element) {
-      if (_visible) {
-        setVisible(false);
+    function ontouchstartInner(e: TouchEvent, current: Element) {
+      if (e.target instanceof Node && current.contains(e.target)) {
+        setVisible(true);
+        setPosition(e);
         return;
       } else {
-        if (e.target instanceof Node && current.contains(e.target)) {
-          setVisible(true);
-          setPosition(e);
-          return;
-        } else {
-          setVisible(false);
-          return;
-        }
+        setVisible(false);
+        return;
       }
     }
 
-    // function onpointerover(e: PointerEvent) {
-    //   setVisible(false);
-    //   setPosition(e);
-    // }
+    function onpointerover(e: PointerEvent) {
+      setVisible(false);
+      setPosition(e);
+    }
 
-    // function onpointerout() {
-    //   setVisible(false);
-    //   position_ref.current = NULL_RECT;
-    // }
+    function onpointerout() {
+      setVisible(false);
+      position_ref.current = NULL_RECT;
+    }
 
-    // function onpointermove(e: PointerEvent) {
-    //   setPosition(e);
-    // }
+    function onpointermove(e: PointerEvent) {
+      setPosition(e);
+    }
 
-    document.addEventListener('pointerdown', onpointerenter);
-    // e.addEventListener('pointerover', onpointerover);
-    // e.addEventListener('pointerout', onpointerout);
-    // e.addEventListener('pointermove', onpointermove);
+    document.addEventListener('touchstart', ontouchstart);
+    current.addEventListener('pointerover', onpointerover);
+    current.addEventListener('pointerout', onpointerout);
+    current.addEventListener('pointermove', onpointermove);
     return () => {
-      document.removeEventListener('pointerdown', onpointerenter);
-      // e.removeEventListener('pointerover', onpointerover);
-      // e.removeEventListener('pointerout', onpointerout);
-      // e.removeEventListener('pointermove', onpointermove);
+      document.removeEventListener('touchstart', ontouchstart);
+      current.removeEventListener('pointerover', onpointerover);
+      current.removeEventListener('pointerout', onpointerout);
+      current.removeEventListener('pointermove', onpointermove);
     };
   }, [children_with_ref, update]);
 
