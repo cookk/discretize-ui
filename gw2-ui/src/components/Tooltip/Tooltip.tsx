@@ -70,7 +70,8 @@ const Tooltip = ({
   const children_ref = useRef<HTMLElement>(null);
   const position_ref = useRef<ClientRectObject>(NULL_RECT);
   const [_visible, setVisible] = useState<boolean>(false);
-  const visible = !disabled && _visible;
+  const [_fixed, setFixed] = useState<boolean>(false);
+  const visible = (!disabled && _visible) || _fixed;
 
   // We need to finagle a ref into the child component.
   const children_with_ref = useMemo(() => {
@@ -119,11 +120,12 @@ const Tooltip = ({
 
     function ontouchstartInner(e: TouchEvent, current: Element) {
       if (e.target instanceof Node && current.contains(e.target)) {
-        setVisible(true);
+        setFixed(true);
         setPosition(e);
         return;
       } else {
-        setVisible(false);
+        setFixed(false);
+        position_ref.current = NULL_RECT;
         return;
       }
     }
