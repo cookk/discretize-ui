@@ -129,7 +129,7 @@ const Tooltip = ({
     }
 
     function onpointerover(e: PointerEvent) {
-      setVisible(false);
+      setVisible(true);
       setPosition(e);
     }
 
